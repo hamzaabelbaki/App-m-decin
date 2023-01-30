@@ -1,5 +1,9 @@
+import 'package:cnam/screens/profilPrestataire.dart';
 import 'package:cnam/screens/signupAssur%C3%A9.dart';
 import 'package:flutter/material.dart';
+
+import '../Widgets/app_colors.dart';
+import 'informationsAssure.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -12,19 +16,16 @@ class _LogInState extends State<LogIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.Blue,
       body: SingleChildScrollView(
           child: Column(
         children: [
           Container(
             height: 300,
             decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.only(bottomLeft: Radius.circular(90)),
-                color: Color(0xff123456),
-                gradient: LinearGradient(colors: [
-                  new Color(0xff123456),
-                  Color.fromARGB(255, 148, 186, 230)
-                ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
+              color: AppColors.white,
+            ),
             child: Center(
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -33,57 +34,57 @@ class _LogInState extends State<LogIn> {
                 Container(
                   margin: EdgeInsets.only(top: 50),
                   child: Image.asset('assets/cnam_logo.png'),
-                  height: 150,
-                  width: 250,
+                  height: 170,
+                  width: 300,
                 ),
                 Container(
                   margin: EdgeInsets.only(right: 20, top: 20),
                   alignment: Alignment.bottomRight,
                   child: Text(
                     "Se Connecter",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: AppColors.Blue,
+                        fontWeight: FontWeight.bold),
                   ),
                 )
               ],
             )),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+            margin: EdgeInsets.only(left: 20, right: 20, top: 120),
             padding: EdgeInsets.only(left: 20, right: 20),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
-                boxShadow: [
+              borderRadius: BorderRadius.circular(20),
+              color: AppColors.white,
+              /*  boxShadow: [
                   BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 50,
                       color: Color(0xffEEEEEE))
-                ]),
+                ]*/
+            ),
             alignment: Alignment.center,
             child: TextField(
               cursorColor: Color(0xff123456),
               decoration: InputDecoration(
                   icon: Icon(
-                    Icons.password_rounded,
-                    color: Color(0xff123456),
+                    Icons.mail,
+                    color: AppColors.Blue,
                   ),
-                  hintText: "Entrer Matricule",
+                  hintText: "Email",
+                  hintStyle: TextStyle(fontSize: 18),
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+            margin: EdgeInsets.only(left: 20, right: 20, top: 30),
             padding: EdgeInsets.only(left: 20, right: 20),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.grey[200],
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Color(0xffEEEEEE))
-                ]),
+              borderRadius: BorderRadius.circular(20),
+              color: AppColors.white,
+            ),
             alignment: Alignment.center,
             child: TextField(
               obscureText: true,
@@ -91,9 +92,10 @@ class _LogInState extends State<LogIn> {
               decoration: InputDecoration(
                   icon: Icon(
                     Icons.vpn_key,
-                    color: Color(0xff123456),
+                    color: AppColors.Blue,
                   ),
                   hintText: "Entrer mot de passe ",
+                  hintStyle: TextStyle(fontSize: 18),
                   enabledBorder: InputBorder.none,
                   focusedBorder: InputBorder.none),
             ),
@@ -102,39 +104,45 @@ class _LogInState extends State<LogIn> {
             margin: EdgeInsets.only(top: 20, right: 20),
             alignment: Alignment.centerRight,
             child: GestureDetector(
-              child: Text("Mot de passe oublié?"),
+              child: Text(
+                "Mot de passe oublié?",
+                style: TextStyle(color: AppColors.black, fontSize: 14),
+              ),
               onTap: () => {},
             ),
           ),
           GestureDetector(
             /* changer code  */
             onTap: () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => SignUp()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProfilPrestataire()))
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 40),
               padding: EdgeInsets.only(left: 20, right: 20),
               alignment: Alignment.center,
               height: 54,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                color: AppColors.green,
+                /* gradient: LinearGradient(
                     colors: [new Color(0xff123456), new Color(0xff123456)],
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
-                  ),
-                  borderRadius: BorderRadius.circular(50),
-                  boxShadow: [
+                  ),*/
+                borderRadius: BorderRadius.circular(20),
+                /*  boxShadow: [
                     BoxShadow(
                         offset: Offset(0, 10),
                         blurRadius: 50,
                         color: Color(0xffEEEEEE))
-                  ]),
+                  ]*/
+              ),
               child: Text(
                 "Se Connecter",
                 style: TextStyle(
-                  color: Colors.white,
-                ),
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18),
               ),
             ),
           )

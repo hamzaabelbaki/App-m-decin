@@ -1,5 +1,8 @@
 import 'dart:async';
 
+import 'package:cnam/Widgets/app_colors.dart';
+import 'package:cnam/screens/home.dart';
+import 'package:cnam/screens/signupAssur%C3%A9.dart';
 import 'package:flutter/material.dart';
 
 import 'loginAssuré.dart';
@@ -26,7 +29,7 @@ class _StartState extends State<Start> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => LogIn()));
+        context, MaterialPageRoute(builder: (context) => home()));
   }
 
   @override
@@ -35,17 +38,22 @@ class _StartState extends State<Start> {
       body: Stack(
         children: [
           Container(
+            // margin: EdgeInsets.only(top: 20),
             decoration: BoxDecoration(
-                color: Color(0xff123456),
-                gradient: LinearGradient(
+              color: AppColors.white,
+              /*gradient: LinearGradient(
                   colors: [new Color(0xff123456), new Color(0xff2E4A6F)],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                )),
+                )*/
+            ),
           ),
           Center(
             child: Container(
-              child: Image.asset('assets/cnam_logo.png'),
+              child: Image.asset(
+                'assets/cnam_logo.png',
+                width: 500,
+              ),
             ),
           )
         ],
