@@ -1,7 +1,5 @@
 # Application mobile de Gestion des rendez-vous médecin
 ![Screenshot_1674935545](https://user-images.githubusercontent.com/79449118/215763560-451490cf-9340-44b0-8fe7-2dddfa328e38.png )
-<img src="[https://your-image-url.type](https://user-images.githubusercontent.com/79449118/215763560-451490cf-9340-44b0-8fe7-2dddfa328e38.png)" width="100" height="100">
-<img src="https://user-images.githubusercontent.com/79449118/215763544-78196308-9c8e-4de8-a3d9-1aacfc912b0f.png" width="100" height="100">
 ![Screenshot_1674909896](https://user-images.githubusercontent.com/79449118/215763544-78196308-9c8e-4de8-a3d9-1aacfc912b0f.png )
 ![Screenshot_1674935561](https://user-images.githubusercontent.com/79449118/215763584-4fd9db0a-fba7-4435-96be-24e3925f4891.png)
 ![Screenshot_1674935597](https://user-images.githubusercontent.com/79449118/215763609-1e3ad0fe-6bfc-452a-ba05-95d45707aa3a.png)
