@@ -1,4 +1,17 @@
-# cnam
+# Application mobile de Gestion des rendez-vous médecin
+# Description
+Notre application offre des fonctionalités, certaines pour les médecins qui peuvent 
+  - Créer un compte en remplissant un formulaire d'inscription, en spécifiant ses informations personnelles (e.g. spécialité, nom, prénom...)
+  - consulter leur agenda pour géréer les rendez-vous.
+  - Approuver les rendez-vous.
+Et d'autres fonctionalités pour les patients:
+  - Créer un compte en remplissant un formulaire d'inscription, en spécifiant ses informations personnelles (e.g. nom, prénom...)
+  - consulter les differents spécialité des médecin
+  - consulter la liste des médecin inscrit dans notre application
+  - déposer une demande pour un rendez-vous avec le médecin choisit en accédant à son agenda.
+  
+Pour ce projet nous avons choisi Flutter comme framewrok.
+
 
 A new Flutter project.
 
